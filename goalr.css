@@ -1,0 +1,165 @@
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,dialog,div,dl,dt,em,embed,fieldset,figcaption,figure,font,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,hr,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,meter,nav,object,ol,output,p,pre,progress,q,rp,rt,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video,xmp{border:0;margin:0;padding:0;font-size:100%}html,body{height:100%}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}b,strong{font-weight:bold}img{color:transparent;font-size:0;vertical-align:middle;-ms-interpolation-mode:bicubic}li{display:list-item}table{border-collapse:collapse;border-spacing:0}th,td,caption{font-weight:normal;vertical-align:top;text-align:left}q{quotes:none}q:before,q:after{content:'';content:none}sub,sup,small{font-size:75%}sub,sup{line-height:0;position:relative;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}svg{overflow:hidden}
+
+
+body { background: #c8e8e8; font: 14px/1.45em 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+h1, h2, h3, h4 { line-height: 1.45em; }
+h1 { font-size: 40px; }
+h2 { font-size: 26px; }
+input[type=checkbox] { cursor: pointer; margin: 3px 0 2px; vertical-align: top; }
+input[type=file] { display: block; }
+input[type=submit] { background: #6f6; display: block; padding: 20px; }
+input[type=text] { border-radius: 5px; width: 200px; }
+label { cursor: pointer; display: block; width: 320px; }
+li { list-style: none; }
+select { width: 220px; }
+span { color: rgba(50,50,50,0.8); font-size: 10px; vertical-align: top; }
+
+
+#content { display: none; height: 400px; left: 500px; padding: 20px; position: absolute; top: 120px; width: 520px; }
+#content label { display: inline-block; }
+.goals { background: #aea; }
+.tasks { background: #fbb; }
+.motifs { background: #bbf; }
+.motifs p label { white-space: pre; }
+.cards { background: #adf; }
+.signup { background: #ccc; }
+.settings { background: #678; }
+
+
+#add-goals, #add-tasks, #add-motifs { background: url('images/add.png') no-repeat 0 4px; display: inline-block; line-height: 22px; padding-left: 22px; }
+#add-motifs { border: none; height: 22px; padding: 0 0 0 22px; }
+#blur { background: rgba(0,0,0,0.1); display: none; height: 100%; left: 0; position: absolute; top: 0; width: 100%; z-index: 1; }
+#button-login { float: right; font-size: 2em; line-height: 1.5em; margin-top: 140px; }
+#button-update { background: red; padding: 10px; }
+#inspire { display: block; font-size: 2em; margin: 50px; }
+#link-signup { float: right; }
+#login { background: gray; display: none; height: 120px; margin: 0px auto 0; width: 100%; }
+#login form { float: right; text-align: right; }
+#login input[type=submit] { margin-left: 300px; padding: 0; }
+#logout { float: right; }
+#private { margin: 7px 5px 0 0; }
+#reminder { background: gold; height: 40px; width: 100%; }
+#update { font-size: 0.9em; margin: -24px 0 0 43px; position: absolute; z-index: 10; }
+#update input { margin-right: 10px; width: 320px; }
+
+
+.active { border-bottom: 5px solid orange; }
+.delete { background: url('images/delete.gif') no-repeat 0 0; float: right; padding-left: 22px; text-indent: -9999px; }
+.edit { background: url('images/edit.png') no-repeat 5px 0; float: left; padding-left: 27px; text-indent: -9999px; width: 0; }
+.error { background: #fdd; border: red; color: red; }
+.error h3 { color: red; }
+.image { background: url('images/image.png') no-repeat 0 0; float: left; padding-left: 22px; text-indent: -9999px; }
+.loading { background: url('images/loading.gif') no-repeat 0 0; float: left; left: 8px; margin-top: 2px; position: absolute; }
+.ok { background: #dfd; border: green; color: green; }
+.strike { color: #333; text-decoration: line-through; }
+.tabs { background: gray; height: 25px; width: 100%; }
+.tabs li { float: left; height: 25px; overflow: hidden; width: 170px; }
+.update label, .update span { height: 20px; overflow: hidden; visibility: hidden; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div.calendario {
+	width: 154px;
+	position: absolute;
+	background: #fff url('/img/fe/bg_calendario_sombra.gif') repeat-y right;
+	border-left: 1px solid #f6f6f6;
+	border-top: 1px solid #f6f6f6;	
+	display: none;
+}
+
+div.calendario a.fechar {
+	display: block;
+	position: absolute;
+	top: -19px;
+	right: 0px;
+	height: 18px;
+	text-decoration: none;
+	background: #fff;
+	width: 20px;
+	text-align:center;
+	vertical-align: center;
+	line-height: 18px;
+	color: #000;
+	font:bold 12px Tahoma;
+}
+
+div.calendario a.bt_controle_mes {
+	display: block;
+	height: 15px;
+	position: absolute;
+	top: 0px;
+	vertical-align: middle;
+	text-decoration: none;
+	color:#222;
+	line-height:15px;
+	vertical-align: middle;	
+}
+
+div.calendario a.bt_voltar_mes { left: 2px; }
+div.calendario a.bt_avancar_mes { right: 2px; }
+
+div.calendario p.nome_mes {
+	text-align: center;
+	display: block;
+	height: 18px;
+	background: #efeff0;
+	font-size: 12px;
+	font-weight: bold;
+	color: #6d6d6d;
+	line-height:18px;
+	vertical-align: middle;
+	margin: 0;
+}
+
+div.calendario ul {
+	margin:0;
+	padding:0;
+}
+div.calendario ul li {
+	display: block;
+	float: left;
+	width: 22px;
+	height: 17px;
+	text-align: center;
+	font-size: 11px;
+	line-height: 17px;
+	vertical-align: middle;
+}
+
+div.calendario ul li a { font-weight: bold; color:#6d6d6d; text-decoration:none; }
+div.calendario ul li:hover { background: rgba(200,200,200,0.5); text-decoration: underline; }
+
+div.calendario ul li.semana {
+	background: #c0c7ca;
+	font-weight: bold;		
+	color: #fff;
+}
+
+div.calendario ul li.dia {
+	color: #999;
+}
+
+div.calendario ul li.default {	
+	background: #ececed;
+	color: #f00; 
+	font-weight: bold;
+}
+
+div.calendario ul li.default a { color: #f00; }
+
+div.exemplo { margin-bottom: 150px;

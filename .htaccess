@@ -1,0 +1,11 @@
+Options +FollowSymLinks
+ 
+RewriteEngine On
+
+RewriteRule ^([a-zA-Z0-9]+)/goals$ goals.php?user=$1
+RewriteRule ^([a-zA-Z0-9]+)/tasks$ tasks.php?user=$1
+RewriteRule ^([a-zA-Z0-9]+)/motifs$ motifs.php?user=$1
+RewriteRule ^([a-zA-Z0-9]+)/cards$ cards.php?user=$1
+RewriteRule ^([a-zA-Z0-9]+)/settings$ settings.php?user=$1
+RewriteRule ^signup$ signup.php
+RewriteRule ^home$ index.php
